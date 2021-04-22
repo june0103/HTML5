@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	window.onload = function() {
+		var gubun = document.getElementById('yumu');
+		var radios = document.getElementsByTagName('input');
+		//이벤트 연결
+		for (var i = 0; i < radios.length; i++) {
+			radios[i].onclick = function() {
+				if(radios[0].checked){
+					gubun.style.display = 'none';
+				}else{
+					gubun.style.display = '';
+				}
+			}
+		}
+	} 
+</script>
+</head>
+<body>
+<form action="">
+	<input type="radio" name="price" checked value="0">무료
+	<input type="radio" name="price" value="1">유료
+</form>
+<div id="yumu" style="display: none;">유료회원 가입비는 10,000</div>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>색 지정</title>
+<script type="text/javascript">
+	window.onload = function() {
+		var canvas = document.getElementById('canvas');
+		
+		if(canvas.getContext){
+			var context = canvas.getContext('2d');
+			
+			context.fillStyle = 'rgb(200,0,0)';
+			context.fillRect(10,10,100,100); //x,y,width,height
+			
+			context.fillStyle = '#0c30c3';
+			context.fillRect(50,50,100,100);
+			
+			context.beginPath();
+			context.arc(250,90,80,0,Math.PI*2,true);
+			context.fillStyle = 'yellow';
+			context.strokeStyle = 'blue';
+			context.fill();
+			context.stroke();
+			
+		}else{
+			alert('지원하지않는 브라우저입니다.');
+		}
+	}
+</script>
+</head>
+<body>
+	<canvas id="canvas" width="500" height="220"></canvas>
+</body>
+</html>

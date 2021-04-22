@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>효과와 애니메이션</title>
+<script type="text/javascript" src="../js/jquery-3.5.1.min.js"></script>
+<script type="text/javascript">
+	$(function() {
+		$('#btn1').on('click',function(){
+			$('#Koala').fadeTo('slow',0.3);
+		})
+		$('#btn2').on('click',function(){
+			$('#Koala').fadeTo('slow',1);
+		})
+	})
+
+</script>
+</head>
+<body>
+	<button id="btn1">투명도(30%)</button>
+	<button id="btn2">투명도(100%)</button>
+	<div>
+		<img src="../images/Koala.jpg" id="Koala" width="100" height="100">
+	</div>
+</body>
+</html>

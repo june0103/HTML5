@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>실습</title>
+<script type="text/javascript" src="../js/jquery-3.5.1.min.js"></script>
+<script type="text/javascript">
+	$(function() {
+		var score = [
+			{name:'홍길동',korean:'80',english:'90',math:'88'},
+			{name:'박문수',korean:'99',english:'99',math:'77'},
+			{name:'이순신',korean:'89',english:'77',math:'99'},
+			{name:'김유신',korean:'88',english:'99',math:'98'},
+		]
+		
+		var output = '<tr><td>이름</td><td>국어</td><td>영어</td><td>수학</td></tr>';
+		
+		$.each(score,function(index,item){
+			
+			output += '<tr>';
+			output += '<td>'+item.name+'</td>';
+			output += '<td>'+item.korean+'</td>';
+			output += '<td>'+item.english+'</td>';
+			output += '<td>'+item.math+'</td>';
+			output += '</tr>';
+		})
+		
+		$('#output').append(output);
+	})
+</script>
+</head>
+<body>
+	<table id="output"></table>
+</body>
+</html>

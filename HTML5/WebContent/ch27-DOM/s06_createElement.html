@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>태그 생성</title>
+<script type="text/javascript">
+	window.onload = function(){
+		//태그생성
+		var header = document.createElement('h1');
+		//h1태그에 표시될 내용 생성
+		var textNode = document.createTextNode('Hello DOM');
+		
+		//노드를 연결함
+		//h1태그에 텍스트를 추가
+		header.appendChild(textNode);
+		
+		//body에 h1태그를 추가
+		document.body.appendChild(header);
+	};
+</script>
+</head>
+<body>
+
+</body>
+</html>

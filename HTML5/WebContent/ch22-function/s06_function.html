@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function avgWeight(height, weight) {
+		var avg_weight = (height-100)*0.9;
+		
+		document.write('당신의 키는 ' + height + 'cm이고 ');
+		document.write('현재 몸무개는 ' + weight + 'kg이며 ');
+		document.write('적정 몸무게는 ' + avg_weight + 'kg입니다.<br>');
+		
+		if(weight>avg_weight){
+			document.write('적정 몸무게 초과');
+		}else{
+			document.write('적정 몸무게 이하');
+		}
+	}
+	var height = prompt('키 입력','');
+	var weight = prompt('몸무게 입력','');
+	avgWeight(height,weight);
+</script>
+</head>
+<body>
+
+</body>
+</html>

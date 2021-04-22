@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>문서 객체 추가</title>
+<script type="text/javascript" src="../js/jquery-3.5.1.min.js"></script>
+<script type="text/javascript">
+	$(function() {
+		var content = [
+			{name:'홍길동', city:'서울시'},
+			{name:'박문수', city:'부산시'},
+			{name:'김유신', city:'대구시'},
+			{name:'장영실', city:'광주시'}			
+		];
+		
+		//배열의 객체 정보 읽기
+		$.each(content,function(index,item){
+			//index : 배열의 인덱스, item : 배열에 저장되어있는 객체
+			var output = '';
+			output += '<div>';
+			output += '	<h1>' + item.name + '</h1>';
+			output += '	<h2>' + item.city + '</h2>';
+			output += '</div>';
+			
+			//문서 객체를 생성해서 div에 추가
+			$('#output').append(output);
+		})
+	})
+</script>
+</head>
+<body>
+	<div id="output"></div>
+</body>
+</html>

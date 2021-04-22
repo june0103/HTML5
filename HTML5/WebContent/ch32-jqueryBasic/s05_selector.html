@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>태그선택자와 ID선택자 연계</title>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript">
+	//문서가 준비 완료되면 매개변수로 전달된 함수를 실행하라는 의미
+	$(document).ready(function() {
+		//태그 선택자.jquery객체
+					//  속성	  , 속성값
+		$('h1#target').css('color','orange');
+		
+	})
+</script>
+</head>
+<body>
+	<h1>header-0</h1>
+	<h1 id="target">header-1</h1>
+	<h1>header-2</h1>
+</body>
+</html>

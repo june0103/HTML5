@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>form</title>
+</head>
+<body>
+<!-- 
+서버에 데이터를 전송할 때는 form태그 안에 하위태그 input,select,textarea 등을 명시하고 태그에 데이터를 입력해서 전송함.
+form태그 밖에 명시한 태그에 입력한 데이터는 전송되지 않는다.
+ -->
+ <form action="a.jsp" method="post">
+ 	이름 : <input type="text" name="name" size="10" maxlength="15"> <br>
+ 	비밀번호 : <input type="password" name="password" size="10" maxlength="10" > <br>
+ 	파일업로드 : <input type="file" name="image"> <br>
+ 	좋아하는 계절 <br>
+ 	<!-- 체크박스는 다중선택 가능 -->
+ 	<input type="checkbox" name="season" value="봄" checked="checked">봄
+ 	<input type="checkbox" name="season" value="여름">여름
+ 	<input type="checkbox" name="season" value="가을">가을
+ 	<input type="checkbox" name="season" value="겨울">겨울 <br>
+ 	국적 <br>
+ 	<!-- radio는 단일선택 -->
+ 	<input type="radio" name="country" value="대한민국" checked="checked">대한민국
+ 	<input type="radio" name="country" value="영국">영국
+ 	<input type="radio" name="country" value="프랑스">프랑스 <br>
+ 	학교 <br>
+ 	<select name="school">
+ 		<option value="초등학교">초등학교</option>
+ 		<option value="중학교">중학교</option>
+ 		<option value="고등학교" selected="selected">고등학교</option>
+ 		<option value="대학교">대학교</option>
+ 	</select> <br>
+ 	직업 <br>
+ 	<select name="job">
+ 		<optgroup label="전문직">
+ 			<option value="의사">의사</option>
+ 			<option value="간호사">간호사</option>
+ 			<option value="프로그래머">프로그래머</option>
+ 		</optgroup>
+ 		<optgroup label="스포츠선수">
+ 			<option value="농구선수">농구선수</option>
+ 			<option value="야구선수">야구선수</option>
+ 			<option value="축구선수">축구선수</option>
+ 		</optgroup>
+ 	</select>
+ 	<br>
+ 	내용 <br>
+ 	<textarea rows="5" cols="50" name="content"></textarea>
+ 	<br>
+ 	읽기 전용 : <input type="text" name="level" value="일반회원" readonly="readonly">
+ 	<br>
+ 	<input type="submit" value="전송">
+ 	<input type="reset" value="초기화">
+ 	<br>
+ </form>
+</body>
+</html>

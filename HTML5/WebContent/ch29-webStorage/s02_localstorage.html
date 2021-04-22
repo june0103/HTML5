@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>로컬스토리지</title>
+<script type="text/javascript">
+	window.onload = function() {
+		//초기값 설정
+		load_setting();
+		//form에 이벤트 연결
+		var form = document.getElementById('frm');
+		form.onsubmit = function() {
+			sav_setting();
+			
+			//기본이벤트 제거
+			return false;
+		}
+	}
+	
+	//로컬스토리지에 설정값 저장
+	function sav_setting() {
+		var bg_color = document.getElementById('bg_color');
+		localStorage.setItem('bg_color', bg_color.value);
+		
+		var text_color = document.getElementById('text_color');
+		localStorage.setItem('text_color', text_color.value);
+		
+		var text_size = document.getElementById('text_size');
+		localStorage.setItem('text_size', text_size.value);
+		
+		//스타일을 태그에 반영
+		apply_data();
+	}
+	
+	//스타일을 태그에 반영
+	function apply_data() {
+		//배경색 지정
+		var bg_color = document.getElementById('bg_color');
+		document.body.style.backgroundColor = bg_color.value;
+		
+		//글자색 지정
+		var text_color = document.getElementById('text_color');
+		document.body.style.color = text_color.value;
+		
+		//글자의 크기
+		var text_size = document.getElementById('text_size');
+		document.body.style.fontSize = text_size.value;
+	}
+	
+	//로컬스토리지에 저장된 데이터를 읽서어 input태그에 select태그에 표시
+	function load_setting() {
+		//로컬스토리지에서 저장된 데이터 읽기
+		var bgcolor = localStorage.getItem('bg_color');
+		var textcolor = localStorage.getItem('text_color');
+		var textsize = localStorage.getItem('text_size');
+		
+		//input태그와 select태그에 표시
+		document.getElementById('bg_color').value = bgcolor;
+		document.getElementById('text_color').value = textcolor;
+		document.getElementById('text_size').value = textsize;
+		
+		//스타일 반영
+		apply_data();
+	}
+</script>
+</head>
+<body>
+<h2>환경설정 값 기억</h2>
+<form id="frm">
+	<fieldset id="colors">
+		<legend>색상/글자 크기 선택</legend>
+		<ul>
+			<li>
+				<label for="bg_color">배경색</label>
+				<input type="text" name="bg_color" id="bg_color">
+			</li>
+			<li>
+				<label for="text_color">글자색</label>
+				<input type="text" name="text_color" id="text_color">
+			</li>
+			<li>
+				<label for="text_size">글자크기</label>
+				<select name="text_size" id="text_size">
+					<option value="16px">16px</option>
+					<option value="20px">20px</option>
+					<option value="24px">24px</option>
+				</select>
+			</li>
+		</ul>
+		<input type="submit" value="저장">
+	</fieldset>
+</form>
+</body>
+</html>

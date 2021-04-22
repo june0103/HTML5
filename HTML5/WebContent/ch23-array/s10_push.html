@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>실습</title>
+<script type="text/javascript">
+	var array = [];
+	var sum = 0, avg;
+	for (var i = 0; i < 5; i++) {
+		array.push(prompt('점수입력',''));
+	}
+	for (var i = 0; i < array.length; i++) {
+		sum += Number(array[i]);
+	}
+	
+	avg = sum / array.length;
+	
+	document.write('총점 : '+sum+'점<br>');
+	document.write('평균 : '+avg+'점<br>');
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

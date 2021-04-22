@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>jQuery UI</title>
+<link rel="stylesheet" href="../css/jquery-ui.min.css">
+<style type="text/css">
+
+</style>
+<script type="text/javascript" src="../js/jquery-3.5.1.min.js"></script>
+<script type="text/javascript" src="../js/jquery-ui.min.js"></script>
+<script type="text/javascript">
+	$(function() {
+		$('#dialog').dialog({
+			autoOpen : false,
+			show:{
+				effect:'blind',
+				duration:1000
+			},
+			hide:{
+				effect:'explode',
+				duration:1000
+			}
+		});
+		
+		$('#opener').click(function() {
+			$('#dialog').dialog('open');
+		})
+		
+	})
+</script>
+</head>
+<body>
+	<div id="dialog" title="버튼 클릭">
+		<p>버튼을 클릭하면 보여지는 다이얼로그</p>
+	</div>
+	
+	<button id="opener">Open Dialog</button>
+</body>
+</html>

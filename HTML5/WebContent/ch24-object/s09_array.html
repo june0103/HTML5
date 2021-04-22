@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>생성자 함수를 이용해서 객체를 생성하고 배열에 저장</title>
+<script type="text/javascript">
+	function Student(name,korean,english,math) {
+		this.이름 = name;
+		this.국어 = korean;
+		this.영어 = english;
+		this.수학 = math;
+		
+		this.getSum = function() {
+			return this.국어 + this.영어 + this.수학;
+		}
+		this.getAvg = function() {
+			return this.getSum()/3;
+		}
+		this.print = function() {
+			return this.이름 + ',' + this.getSum() + ',' + this.getAvg();
+		}
+	}
+	
+	var student = [];
+	student.push(new Student('홍길동',100,99,98));
+	student.push(new Student('박문수',99,98,97));
+	student.push(new Student('강호동',88,87,87));
+	student.push(new Student('유재석',91,92,93));
+	student.push(new Student('김유신',94,95,96));
+	
+	document.write('이름, 총점, 평균<br>');
+	for ( var i in student) {
+		document.write(student[i].print()+'<br>');
+	}
+</script>
+</head>
+<body>
+
+</body>
+</html>

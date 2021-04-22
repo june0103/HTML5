@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>form</title>
+</head>
+<body>
+<form action="signup.jsp" method="post">
+	<fieldset>
+		<legend>회원 가입</legend>
+		<ul>
+			<li>
+			<!-- placeholder : 힌트 기능 -->
+			<label id="name">이름</label>
+			<input type="text" name="name" id="name" placeholder="이름 입력">
+			</li>
+			<li>
+			<!-- autocomplete : 자동완성 -->
+			<label id="email">이메일</label>
+			<input type="email" name="email" id="email" autocomplete="off" placeholder="이메일 입력">
+			</li>
+			<li>
+			<label id="password">비밀번호</label>
+			<input type="password" name="password" id="password" placeholder="비밀번호 입력">
+			</li>
+			<li>
+				<input type="submit" value="전송">
+			</li>
+		</ul>
+	</fieldset>
+</form>
+</body>
+</html>

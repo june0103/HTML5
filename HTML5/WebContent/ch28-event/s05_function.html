@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>이벤트 처리</title>
+<script type="text/javascript">
+	function sub() {
+		var x = document.getElementById('name');
+		//input 태그에 입력된 텍스트를 대문자로 변경해서 저장
+		x.value = x.value.toUpperCase();
+	}
+</script>
+</head>
+<body>
+영어단어 : <input type="text" id="name" onchange="sub()">
+<p>입력필드를 벗어나면 대문자로 변경됩니다.</p>
+</body>
+</html>

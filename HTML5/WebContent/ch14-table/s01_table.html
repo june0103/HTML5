@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>table에 스타일 추가</title>
+<style type="text/css">
+	table {
+		border-collapse:collapse;
+		width: 500px;
+		border: 1px solid orange;
+		/* 
+		중앙 정렬 할 때는 테이블의 margin을 상하 0px 좌우 auto로 
+		 */		
+		margin: 0 auto;
+	}
+	th{
+		border: 1px solid orange;
+		background-color: #FFCC66;
+		color: white;
+		padding: 5px;
+	}
+	td{
+		border: 1px solid orange;
+		text-align: center;
+		vertical-align: top;
+		height: 100px;
+	}
+	tr.bg td{
+		color: #000000;
+		background-color: #EAF203;
+		vertical-align: bottom;
+	}
+	caption {
+		color: #FF6600;
+		font-size: 11pt;
+		font-weight: bold;
+		margin-bottom: 5px;
+	}
+</style>
+</head>
+<body>
+<table>
+	<caption>table에 스타일 추가</caption>
+	<tr>
+		<th>월요일</th>
+		<th>화요일</th>
+		<th>수요일</th>
+	</tr>
+	<tr>
+		<td>하늘</td>
+		<td>바다</td>
+		<td>산</td>
+	</tr>
+	<tr class="bg">
+		<td>서울</td>
+		<td>부산</td>
+		<td>광주</td>
+	</tr>
+</table>
+</body>
+</html>

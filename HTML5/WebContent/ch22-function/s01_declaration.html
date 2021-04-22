@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>함수</title>
+<script type="text/javascript">
+	//선언적 함수
+	function check() {
+		document.write('호출하면 동작함<br>');
+	}
+	//함수호출
+	check();
+	
+	function check2(msg){
+		document.write(msg+'을 좋아합니다.<br>');
+	}
+	
+	//함수호출
+	check2('가을');
+	
+	function check3(num) {
+		return num + num;
+	}
+	
+	//함수호출
+	document.write(check3(3));
+	
+	//익명함수
+	var play = function() {
+		document.write('운동을좋아해요!!<br>');
+	};
+	
+	//함수호출
+	play();
+	
+	var play2 = function(item) {
+		document.write(item +'을좋아해요!!<br>');
+	};
+	
+	play2('축구');
+	
+	var play3 = function(x,y) {
+		return x + y;
+	};
+	
+	//함수호출
+	document.write(play3(3,4));
+</script>
+</head>
+<body>
+
+</body>
+</html>

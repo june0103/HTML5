@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>isFinite 함수</title>
+<script type="text/javascript">
+	var number1 = 10/0;
+	document.write('number1 = ' + number1 + '<br>');
+	
+	if(number1 == Infinity){ //0으로 나누는 경우
+		document.write('무한<br>');
+	}else{
+		document.write('유한<br>');
+	}
+	
+	var number2 = -10/0; //음수를 0으로 나누면 -Infinity
+	document.write('number2 = ' + number2 + '<br>');
+	document.write('--------------------<br>');
+	
+	//양수, 음수를 0으로 나눴는지 아닌지 모든 검증 가능
+	if(isFinite(number1)){ //0이 아닌 수로 나눈경우
+		document.write('우한<br>');
+	}else{ //0으로 나눈 경우
+		document.write('무한<br>');
+	}
+	
+	if(isFinite(number2)){ //0이 아닌 수로 나눈경우
+		document.write('우한<br>');
+	}else{ //0으로 나눈 경우
+		document.write('무한<br>');
+	}
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>

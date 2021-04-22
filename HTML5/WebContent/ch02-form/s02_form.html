@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	ul{
+		padding: 0;
+		margin: 0;
+		list-style: none;
+	}
+	ul li{
+		padding: 0;
+		margin: 0 0 1px 0;
+	}
+	label{
+		width: 150px;
+		float: left;
+	}
+</style>
+</head>
+<body>
+<form action="do.jsp" method="post">
+<!--
+fieldset : 폼을 그룹핑하는 역할
+legend : 제목 지정
+ -->
+	<fieldset>
+		<legend>프로젝트 정보</legend>
+		<ul>
+			<li>
+			<!-- autofocus : 페이지 로드시 자동 포커스 지정
+				 required : 입력필수 지정 -->
+				<label for="name">이름</label>
+				<input type="text" name="name" id="name" required="required" autofocus="autofocus">
+			</li>
+			<li>
+				<!-- range : 슬라이드 막대로 표시하는 숫자 필드 -->
+				<label for="priority">중요도</label>
+				<input type="range" name="priority" id="priority" min="0" max="10" value="0">
+			</li>
+			<li>
+				<!-- number : 숫자 필드 -->
+				<label for="hours">예상 시간</label>
+				<input type="number" name="hours" id="hours" min="0" max="1000">
+			</li>
+			<li>
+				<label for="start_date">시작 날짜</label>
+				<input type="date" name="start_date" id="start_date">
+			</li>	
+			<li>
+				<label for="email">이메일</label>
+				<input type="email" name="email" id="email">
+			</li>
+			<li>
+				<label for="url">url</label>
+				<input type="url" name="url" id="url">
+			</li>	
+			<li>
+				<label for="search">search</label>
+				<input type="search" name="search" id="search">
+			</li>				
+			<li>
+				<input type="submit" value="전송">
+			</li>
+		</ul>
+	</fieldset>
+</form>
+</body>
+</html>

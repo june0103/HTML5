@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>이벤트 연결</title>
+<style type="text/css">
+	*{
+		margin: 0;
+		padding: 0;
+	}
+	#galleryWrap{
+		width: 520px;
+		margin: 0 auto;
+		text-align: center;
+	}
+	#galleryWrap img {
+		vertical-align: middle;
+	}
+	img#prev, img#next{
+		cursor: pointer;
+	}
+</style>
+<script type="text/javascript">
+	window.onload = function() {
+		var num = 1;
+		var gallery = document.getElementById('gallery');
+		var prev_btn = document.getElementById('prev');
+		var next_btn = document.getElementById('next');
+		
+		//이전 버튼 이벤트 연결
+		prev_btn.onclick = function() {
+			num--;
+			if(num<1) num=7;
+			//이미지 교체
+			gallery.src='../images/img'+num+'.jpg';
+		}
+		
+		//다음 버튼 이벤트 연결
+		next_btn.onclick = function() {
+			num++;
+			if(num>7) num=1;
+			//이미지 교체
+			gallery.src='../images/img'+num+'.jpg';
+		}
+	}
+</script>
+</head>
+<body>
+<div id="galleryWrap">
+	<h1>이미지 넘기기</h1>
+	<p>
+		<img src="../images/left_btn.png" id="prev">
+		<img src="../images/img1.jpg" id="gallery">
+		<img src="../images/right_btn.png" id="next">
+	</p>
+</div>
+</body>
+</html>

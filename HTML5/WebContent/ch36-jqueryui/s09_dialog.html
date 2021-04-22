@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>jQuery UI</title>
+<link rel="stylesheet" href="../css/jquery-ui.min.css">
+<style type="text/css">
+
+</style>
+<script type="text/javascript" src="../js/jquery-3.5.1.min.js"></script>
+<script type="text/javascript" src="../js/jquery-ui.min.js"></script>
+<script type="text/javascript">
+	$(function() {
+		$('#dialog-confirm').dialog({
+			resizable:false,
+			height:180,
+			modal:true, //modal이 true면 dialog창이 뜨면 부모 영역을 선택할 수 없다
+			buttons:{
+				'Delete all items':function(){
+					$(this).dialog('close');
+				},
+				Cancel:function(){
+					$(this).dialog('close');
+				}
+			}
+		});
+				
+	})
+</script>
+</head>
+<body>
+	<div id="dialog-confirm" title="modal 사용하기">
+		<p><span class="ui-icon ui-icon-alert"></span>내일은 금요일</p>
+	</div>
+	
+	<p>여기는 서울</p>
+</body>
+</html>

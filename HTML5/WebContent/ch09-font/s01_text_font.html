@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>font</title>
+<style type="text/css">
+	/* 
+	font-family
+	
+	명조체, 굴림체, 궁서체 등 구체적인 글자체 이외에 다음 값을 사용하여 폰트의 종류를 값으로 지정
+	값			종류
+	serif		명조 계열 글자체
+	sans-serif	고딕 계열 글자체
+	cursive		필기체
+	fantasy		장식이 되는 글자체
+	monospace	일정한 공간으로되어 있는 글자체
+	
+	font-style
+	값			종류
+	italic		이탤릭체
+	oblique		이탤릭체
+	
+	일괄지정 font
+	font : 	font-style 값
+			font-weight
+			font-variant
+			font-size/line-height
+			font-family
+	 */
+	 .font{font:italic bold small-caps 20pt/40pt sans-serif;}
+	span {
+		font-family: serif; /* 글씨체 */
+		font-size: 20pt; /* 글씨 크기 */
+		font-style: oblique; /* 기울어진 글자 */
+	}
+	p {
+		font: italic bold small-caps 30pt/50pt serif;
+	}
+</style>
+</head>
+<body>
+<span>봄이 오는 소리</span>
+<p>Happy Day!!</p>
+<div class="font">Welcome 환영합니다.</div>
+</body>
+</html>

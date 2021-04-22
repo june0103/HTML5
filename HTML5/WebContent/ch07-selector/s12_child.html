@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>자식선택자(직계 자식만 의미함)</title>
+<style type="text/css">
+	/* 지정한 자식태그만 선택 */
+	body > div {border: 3px solid blue;}
+</style>
+</head>
+<body>
+	<div>
+		<ul>
+			<li>서울</li>
+			<li>부산</li>
+			<li>대구</li>
+			<li>광주</li>
+		</ul>
+		<div>지구</div>
+	</div>
+	<p>
+		<span>바다</span>
+	</p>
+	<div>
+		<div>한국</div>
+	</div>
+</body>
+</html>

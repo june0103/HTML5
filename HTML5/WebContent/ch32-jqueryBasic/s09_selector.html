@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>속성선택자</title>
+<script type="text/javascript" src="../js/jquery-3.5.1.min.js"></script>
+<script type="text/javascript">
+/* 
+속성선택자
+선택자 형태				설명
+요소[속성]					특정 속성을 가지고 있는 문서 객체를 선택
+요소[속성=값]				속성 안의 값이 특정 값과 같은 문서 객체를 선택
+요소[속성~=값]				속성 안의 값이 특정 값을 단어로써 포함하는 문서 객체를 선택
+요소[속성^=값]				속성 안의 값이 특정 값으로 시작한느 문서 객체를 선택
+요소[속성$=값]				속성 안의 값이 특정 값으로 끝나는 문서 객체를 선택
+요소[속성*=값]				속성 안의 값이 특정 값을 포함하는 문서 객체를 선택
+*/
+	$(document).ready(function() {
+		$('button[name]').html('하하!');
+		//.val()메서드는 해당 태그의 value값 변경
+		$('input[type=text]').val('Hello jQuery!!');
+		//특정 값을 단어(공백으로 구분되어 있는 단어)로써 포함하는 문서 객체
+		$('input[name~=한국]').css('background','blue');
+		//특정 값으로 시작
+		$('div[id^=content-]').css('background','pink');
+		//특정 값으로 끝
+		$('div[id$=2]').css('background','yellow');
+		//특정 값을 포함
+		$('input[id*=한강]').css('background','skyblue');
+	})
+</script>
+</head>
+<body>
+	<h3>속성선택자 사용</h3>
+	<button name="btn">버튼1</button>
+	<br>
+	<input type="text">
+	<input type="password">
+	<br>
+	
+	<input name="한국" value="한국">
+	<input name="한국인" value="한국인">
+	<input name="한국 사람" value="한국 사람">
+	<input name="최고 한국 영웅" value="최고 한국 영웅">
+	
+	<div id="content-1">DIV content-1</div>
+	<div id="content_2">DIV content_2</div>
+	
+	<input id="한강" value="한강">
+	<input id="한강의 기적" value="한강의 기적">
+	<input id="한 강의 배" value="한 강의 배"> 
+	<input id="한강유람선" value="한강유람선">
+</body>
+</html>

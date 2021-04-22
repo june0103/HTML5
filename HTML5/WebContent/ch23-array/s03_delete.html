@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>배열 요소의 삭제</title>
+<script type="text/javascript">
+	var array = ['one','tow','three'];
+	
+	array.length = 2; //마지막 데이터 제거
+	document.write(array + '<br>');
+	
+	array.length = 4;
+	document.write(array + '<br>');
+	document.write('-----------------------<br>');
+	
+	//배열 생성
+	var array2 = ['포도','사과','망고'];
+	
+	delete array2[1]; //선택된 인덱스의 데이터만 삭제하고 인덱스는 유지한다
+	document.write(array2 + '<br>');
+	document.write('-----------------------<br>');
+	
+	var array3 = ['서울','부산','대구','광주'];
+	
+	array3.splice(2,1); //인덱스2에 해당하는 요소부터 1개의 요소를 제거하고 제거된 곳을 메운다
+	document.write(array3 + '<br>');
+	document.write(array3.length + '<br>');
+	
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>

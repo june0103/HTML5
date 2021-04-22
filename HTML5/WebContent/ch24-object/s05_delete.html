@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>속성제거</title>
+<script type="text/javascript">
+	var student = {};
+	
+	student.이름 = '홍길동';
+	student.취미 = '악기';
+	student.특기 = '농구';
+	student.장래희망 = '농구선수';
+	
+	student.print = function() {
+			var output = '';
+			for ( var key in student) {
+				if(key != 'print'){
+					output += key + ':' + this[key] + '<br>';
+				}
+			}
+			return output;
+	};
+	
+	document.write(student.print());
+	document.write('--------------------<br>');
+	
+	
+	//속성제거
+	delete student.취미;
+	document.write(student.print());
+</script>
+</head>
+<body>
+
+</body>
+</html>

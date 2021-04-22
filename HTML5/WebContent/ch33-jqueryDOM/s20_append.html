@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>문서 객체 추가</title>
+<script type="text/javascript" src="../js/jquery-3.5.1.min.js"></script>
+<script type="text/javascript">
+	$(function() {
+		var content = [
+			{title:'바다',comment:'푸른 바다'},
+			{title:'산',comment:'높은 산'},
+			{title:'도시',comment:'복잡한 도시'}
+		]
+		
+		var output = '';
+		$.each(content,function(index,item){
+			output += '<div>';
+			output += '	<h1>'+item.title+'</h1>';
+			output += '	<span>'+item.comment+'</span>';
+			output += '</div>';
+		})
+		
+		$('#output').append(output);
+	})
+</script>
+</head>
+<body>
+	<div id="output"></div>
+</body>
+</html>

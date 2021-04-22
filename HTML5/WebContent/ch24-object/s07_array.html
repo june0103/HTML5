@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>실습</title>
+<script type="text/javascript">
+/* 
+이름	 	수입		 지출 잔액(getBalance) 세금(getTax)
+홍길동	3000	2500
+박문서	5000	1100
+이순신	4000	3600
+김유신	7000	4200
+*/
+	var member = [];
+	member.push({이름:'홍길동',수입:3000,지출:2500});
+	member.push({이름:'박문수',수입:5000,지출:1100});
+	member.push({이름:'이순신',수입:4000,지출:3600});
+	member.push({이름:'김유신',수입:7000,지출:4200});
+	
+	for ( var i in member) {
+		member[i].getTax = function() {
+				return this.수입 * 0.05;
+		};
+		member[i].getBalance = function() {
+				return this.수입 - this.getTax() - this.지출;
+		};
+	}
+	
+	document.write('이름		수입		지출		세금		잔액<br>');
+	
+	for ( var i in member) {
+		document.write(member[i].이름 + ' ' + member[i].수입 + '	' + member[i].지출 + '	' + member[i].getTax() + '	' + member[i].getBalance() + '<br>');
+	}
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>

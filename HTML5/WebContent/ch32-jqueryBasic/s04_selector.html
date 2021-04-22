@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>여러개의 태그에 동일한 스타일 적용</title>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript">
+	//문서가 준비 완료되면 매개변수로 전달된 함수를 실행하라는 의미
+	$(document).ready(function() {
+		//태그 선택자.jquery객체
+					//  속성	  , 속성값
+		$('h1,p').css('color','orange');
+		
+	})
+</script>
+</head>
+<body>
+	<h1>강물은 흐르고</h1>
+	<h2>새벽 바람이 차다</h2>
+	<p>내 눈물도 흐르고</p>
+	<div>별들이 흘러간다</div>
+</body>
+</html>

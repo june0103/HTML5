@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>형변환</title>
+<script type="text/javascript">
+	//prompt는 입력된 값을 무조건 문자열로 인식한다
+	var input = prompt('숫자를 입력','숫자');
+	document.write(typeof(input) + ':' + input);
+	document.write('<br>');
+	
+	//데이터가 숫자일 경우 자동적으로 형변환됨
+	document.write(input*10);
+	document.write('<br>');
+	
+	//prompt를 이용해서 입력받는 데이터는 string으로 인식하기 때문에 input에 저장된 데이터는 string 타입이고 + 연산자가 해당 문자열을 연결 처리함
+	document.write(input + 10);
+	document.write('<br>');
+	
+	//형변환
+	//문자열을 숫자로 변환
+	var numberInput = Number(input); //문자열 -> 숫자
+	
+	document.write('<br>형변환 이후<br>');
+	document.write(typeof(numberInput) + ':' + numberInput);
+	document.write('<br>');
+	document.write(numberInput + 10); //연산
+</script>
+</head>
+<body>
+
+</body>
+</html>

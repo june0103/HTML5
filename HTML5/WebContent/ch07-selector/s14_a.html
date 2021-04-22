@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>가상클래스 선택자</title>
+<style type="text/css">
+	/* 
+	형식				역할
+	:hover			마우스 커서가 링크에 올라가 있는 상태
+	:active			마우스 커서를 클릭하고 있는 상태
+	:link			링크를 클릭하지 않은 상태
+	:visited		링크를 클릭해서 방문한 후 상태
+	 */
+	a:link {
+		text-decoration: none;	
+		color: rgb(255,102,102);
+	}
+	a:visited {
+		text-decoration: none;
+		color: rgb(89,71,71);
+	}
+	a:active {
+		text-decoration: none;
+		color: white;
+		background: black;
+	}
+	a:hover {
+		border-bottom: 1px dotted rgb(255,0,0);
+		
+	}
+</style>
+</head>
+<body>
+<a href="https://www.naver.com">네이버</a>
+<a href="https://www.korea.com">코리아닷컴</a>
+</body>
+</html>

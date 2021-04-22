@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="../js/jquery-3.5.1.min.js"></script>
+<script type="text/javascript">
+/* 
+입력양식 필터선택자2
+선택자 형태			설명
+요소:checked			체크된 입력양식
+요소:disable			비활성화된 입력양식
+요소:enable			활성화된 입력양식
+요소:focus			초점이 맞춰져 있는 입력양식
+요소:seleced			select 태그에서 option 객체 중 선택된 태그
+*/
+	$(document).ready(function() {
+		$('input:checked').attr('checked',false);//석택 해제
+		$('input:button').attr('disabled',false);
+	})
+</script>
+</head>
+<body>
+	<input type="checkbox" name="city" value="서울" checked="checked">서울
+	<input type="button" value="확인" disabled="disabled">
+</body>
+</html>

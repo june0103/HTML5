@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>빈 객체에 속성 추가</title>
+<script type="text/javascript">
+	//빈 객체 생성
+	var student = {};
+	
+	//객체에 속성 추가
+	student.이름 = '홍길동';
+	student.취미 = '악기';
+	student.특기 = '프로그래밍';
+	student.장래희망 = '프로그래머';
+	
+	//in 키워드를 이용해서 객체내의 속성 존재 여부 체크
+	document.write('특기' in student);
+	document.write('<br>');
+	document.write(student.취미 + '<br>');
+	
+	//객체에 메서드 추가
+	student.play = function() {
+			document.write('피아노를 연주하다');
+	};
+	
+	//반복문을 이용해서 속성과 메서드 출력
+	//for in 반복문
+	for ( var key in student) {
+		document.write(key + ':' + student[key] + '<br>');
+	}
+</script>
+</head>
+<body>
+
+</body>
+</html>

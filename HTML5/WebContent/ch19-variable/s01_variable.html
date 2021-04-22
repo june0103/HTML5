@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>변수</title>
+<script type="text/javascript">
+/* 
+변수명의 정의
+1)키워드(예약어) 사용 불가
+2)숫자로 시작하면 안된다
+3)특수문자는 _ 와 $만 허용
+4)공백 문자를 포함할 수 없다
+
+식별잘르 잘못 지정한 예
+break(키워드)
+10alpah (숫자로 시작)
+#num (특수문자 사용)
+has space (공백 사용)
+*/
+	//변수 선언
+	var num;
+	
+	//변수에 값을 할당
+	num = 123;
+	document.write('num = '+ num + '<br>');
+	
+	//변수 선언과 초기화
+	var num2 = 1234;
+	document.write('num2 = ' + num2 + '<br>');
+	
+	//변수를 선언하지 않고 출력
+	//document.write('num3 = ' + num3 + '<br>');
+	
+	//변수를 선언한 후 값을 할당하지 않고 출력
+	var num4;
+	//오류는 발생하지 않지만 undefined로 출력
+	document.write('num4 = ' + num4 + '<br>');
+	
+	//두 개 이상의 변수를 한번에 선언
+	var a, b;
+	
+	a=10;
+	b=5;
+	
+	document.write('a + b = ' + (a + b) + '<br>');
+	
+	//두 개 이상의 변수 선언과 초기와
+	var c = 10, d = 3.5;
+	
+	document.write('c + d = ' + (c+d) + '<br>');
+	
+	//변수명으로 한글 사용 가능
+	var 번호 = 3;
+	document.write('번호 = ' + 번호 + '<br>');
+</script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>클래스를 이용한 문서 객체 탐색</title>
+<script type="text/javascript">
+//클래스명일 이용해서 문서 객체를 탐색하는 기능은 HTML5에서 사용가능
+//HTML5가 아니어도 최신 브라우저에서는 지원가능
+	window.onload = function() {
+		/* var foo = document.getElementsByClassName('matched');
+		
+		var output = '';
+		for (var i = 0; i < foo.length; i++) {
+			//span태그의 내용 읽기
+			output += foo[i].innerHTML + '\n';
+		}
+		alert(output); */
+		
+		//클래스명이 여러개인 경우 공백을 구분자로해서 문자열로 전달
+		var fooMatched = document.getElementsByClassName('matched unmatched');
+		var output ='';
+		for (var i = 0; i < fooMatched.length; i++) {
+			//span태그의 내용 읽기
+			output += fooMatched[i].innerHTML + '\n';
+		}
+		alert(output); 
+		
+	}
+</script>
+</head>
+<body>
+	<p id="foo">
+		<span class="matched">a</span>
+		<span class="matched unmatched">b</span>
+		<span class="unmatched">c</span>
+	</p>
+	<p id="bar">
+		<span class="matched">x</span>
+		<span class="matched unmatched">y</span>
+	</p>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>inNaN함수</title>
+<script type="text/javascript">
+	var number1 = 10 / 'A'; //NaN(Not a Number) 출력
+	document.write('number1 = ' + number1 + '<br>');
+	
+	if(number1 == NaN){ //항상 false를 반환하기때문에 inNaN함수를 사용해야 함
+		document.write('숫자x<br>');
+	}else{
+		document.write('숫자o<br>');
+	}
+	
+	document.write('-----------------<br>');
+	//전달되는 인자의 값이 숫자인지 아닌지 판별
+	if(isNaN(number1)){//숫자가 아닌경우 true
+		document.write('숫자x<br>');
+	}else{ //숫자인경우
+		document.write('숫자o<br>');
+	}
+</script>
+</head>
+<body>
+
+</body>
+</html>

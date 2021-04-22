@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>태그명을 통해서 문서객체 탐색</title>
+<script type="text/javascript">
+	//윈도우가 로드될 때 함수를 호출
+	window.onload=function(){
+		var spans = document.getElementsByTagName('span');
+		for (var i = 0; i < spans.length; i++) {
+			if(i%2==1){
+				spans[i].innerHTML = '우주';
+			}else {
+				spans[i].innerHTML = '지구';
+			}
+		}
+	};
+</script>
+</head>
+<body>
+	<span>바다</span><br>
+	<span>바다</span><br>
+	<span>바다</span><br>
+</body>
+</html>

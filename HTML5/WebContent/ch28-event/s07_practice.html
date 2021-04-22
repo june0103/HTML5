@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>실습</title>
+<script type="text/javascript">
+/* 
+국어, 영어, 수학 점수를 입력하고 연산 버튼을 누르면 check()함수를 호출해서 입력한 점수를 읽어들여 총점과 평균을 구하고  alert()를 이용해서 표시
+*/
+	function check() {
+		var korean = document.getElementById('korean');
+		var english = document.getElementById('english');
+		var math = document.getElementById('math');
+		var sum = 0, avg = 0;
+		if(korean.value.trim() == '' || english.value.trim() == '' || math.value.trim() == '' ){
+			alert('점수를 입력하세요');
+			
+			return; //함수를 빠져나가게한다.
+		}
+		
+		if(isNaN(korean.value || english.value || math.value)){
+			alert('숫자를 입력하세요!!');
+		}else{
+			sum = Number(korean.value) + Number(english.value) + Number(math.value);
+			avg = sum / 3;
+			alert('총점 : '+sum+', 평균 : '+avg.toFixed(2));
+		}
+	}
+</script>
+</head>
+<body>
+<form action="">
+	국어 : <input type="text" id="korean"><br>
+	영어 : <input type="text" id="english"><br>
+	수학 : <input type="text" id="math"><br>
+	<input type="button" value="연산" onclick="check();">
+</form>
+</body>
+</html>

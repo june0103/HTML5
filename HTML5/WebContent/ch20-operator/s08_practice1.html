@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>실습</title>
+<script type="text/javascript">
+/* 
+국어, 영어, 수학 성적(0~100) 입력받아서 국어, 영어, 수학, 총점, 평균 구하고 출력
+*/
+	var korean = prompt('국어성적 입력', '');
+	var english = prompt('영어성적 입력', '');
+	var math = prompt('수학성적 입력', '');
+	
+	var sum = Number(korean) + Number(english) + Number(math);
+	var avg = sum/3;
+	
+	document.write("국어성적 : " + korean + '<br>');
+	document.write("영어성적 : " + english + '<br>');
+	document.write("수학성적 : " + math + '<br>');
+	document.write("총점 : " + sum + '<br>');
+	document.write("평균 : " + avg + '<br>');
+</script>
+</head>
+<body>
+
+</body>
+</html>

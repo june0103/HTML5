@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	var name = '기린';
+	var person = {
+			name : '홍길동',
+			eat : function(food) {
+				var name = '강호동';
+				
+				/* 
+				this : 메서드 내에서 자기자신이 가지고 있는 속성을 호출하고 싶을 때 사용함 (객체 내부에서 객체를 참조할 때 사용)
+				ths.name 아니라 name를 호출하면 메서드 내에 선언한 지역변수를 찾고 없을 경우 객체 밖에 선언된 변수를 찾는다.
+				*/
+				
+				alert(name + '이 ' + food + '을 먹습니다.');
+			}
+	};
+	person.eat('밥');
+</script>
+</head>
+<body>
+
+</body>
+</html>

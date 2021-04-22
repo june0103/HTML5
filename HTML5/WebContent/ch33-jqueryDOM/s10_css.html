@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	.first{color:red;}
+	.second{color:pink;}
+	.third{color:orange;}
+</style>
+<script type="text/javascript" src="../js/jquery-3.5.1.min.js"></script>
+<script type="text/javascript">
+	$(function() {
+		var color = $('h1.third').css('color');
+		alert(color);
+	})
+</script>
+</head>
+<body>
+	<h1 class="first">Header-0</h1>
+	<h1 class="second">Header-1</h1>
+	<h1 class="third">Header-2</h1>
+</body>
+</html>

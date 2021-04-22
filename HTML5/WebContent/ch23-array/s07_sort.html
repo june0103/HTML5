@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>배열 정렬</title>
+<script type="text/javascript">
+	var array = ['가','하','아','나'];
+	array.sort(); //정렬
+	
+	document.write(array + '<br>');
+	
+	array.reverse(); //역정렬
+	document.write(array + '<br>');
+	
+	var array2=[52,273,103,32];
+	//작은수가 앞으로 오고 큰수가 뒤로가는 함수를 정의해서 sort메서드에 전달
+	array2.sort(function(left,right){
+		return left - right;
+	});
+	document.write(array2 + '<br>');
+	
+	array2.sort(function(right,left){
+		return left - right;
+	});
+	document.write(array2 + '<br>');
+</script>
+</head>
+<body>
+
+</body>
+</html>

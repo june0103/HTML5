@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>자식선택자</title>
+<script type="text/javascript" src="../js/jquery-3.5.1.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		//자식선택자(직계 자식만을 선택한다)
+		$('body > div').css('border','3px solid red');
+	})
+</script>
+</head>
+<body>
+	<div>
+		<ul>
+			<li>서울</li>
+			<li>부산</li>
+			<li>대구</li>
+			<li>광주</li>
+		</ul>
+		<div>여행</div>
+	</div>
+	<p>
+		<span>하하</span>
+	</p>
+</body>
+</html>

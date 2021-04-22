@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>함수를 이용한 객체 생성</title>
+<script type="text/javascript">
+	//생성자 함수 지정
+	function Student(name, korean, english, math, science) {
+		this.이름 = name;
+		this.국어 = korean;
+		this.영어 = english;
+		this.수학 = math;
+		this.과학 = science;
+		
+		this.getSum = function() {
+			return this.국어 + this.영어 + this.수학 + this.과학;
+		}
+		this.getAvg = function() {
+			return this.getSum() / 4;
+		}
+		this.print = function() {
+			return this.이름 + ',' + this.getSum() + ',' + this.getAvg();
+		}
+	}
+	
+	var student = new Student('홍길동',100,90,89,97);
+	
+	document.write(student.print());
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>

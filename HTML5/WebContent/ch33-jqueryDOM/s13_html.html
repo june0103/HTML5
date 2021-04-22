@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="../js/jquery-3.5.1.min.js"></script>
+<script type="text/javascript">
+	$(function() {
+		$('div').html(function(index) {
+			return '<h2>Header - '+index+'</h2>';
+		});
+		
+		$('h1').html(function(index,html) {
+			//index : 해당 태그의 인덱스
+			//html : 해당 태그의 내용
+			return '**' + html + '**';
+		})
+	})
+</script>
+</head>
+<body>
+	<div></div>
+	<div></div>
+	<div></div>
+	
+	<h1>Header-0</h1>
+	<h1>Header-1</h1>
+	<h1>Header-2</h1>
+</body>
+</html>

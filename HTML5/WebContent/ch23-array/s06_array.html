@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>실습</title>
+<script type="text/javascript">
+	/* 
+	성적 관리하는 배열
+	5과목(국,영,수,과,미)
+	총점,평균 출력
+	*/
+	var array = [];
+	var sum = 0;
+	for (var i = 0; i < 5; i++) {
+		array[i] = prompt('점수입력','');
+	}
+	document.write(array + '<br>');
+	for (var i = 0; i < array.length; i++) {
+		sum += Number(array[i]);
+	}
+	avg = sum/array.length;
+	document.write('총점 : ' + sum + '점<br>');
+	document.write('평균 : ' + avg + '점<br>');
+</script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>appendTo</title>
+<script type="text/javascript" src="../js/jquery-3.5.1.min.js"></script>
+<script type="text/javascript">
+	$(function() {
+		//<>가 없으면 태그를 선택, <>가 있으면 태그를 생성
+		//attr만들어진 태그의 속성을 명시
+		$('<img>').attr({
+			src:'../images/Desert.jpg',width:300, height:250
+		}).appendTo('body');
+	})
+</script>
+</head>
+<body>
+
+</body>
+</html>

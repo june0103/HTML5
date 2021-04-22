@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>이벤트 처리</title>
+<script type="text/javascript" src="../js/jquery-3.5.1.min.js"></script>
+<script type="text/javascript">
+/* 
+현재의 태그 : body에 표시되어 있는 태그
+미래의 태그 : 동적으로 만들어진 태그
+현재의 태그뿐만 아니라 미래의 태그에도 이벤트 연결작업
+			이벤트의 종류, 이벤트소스, 이벤트 핸들러
+$(document).on('click','h1',function(){});
+*/
+	$(function() {
+		//현재의 태그와 미래의 태그 모두 이벤트 연결
+		$(document).on('click','h1',function(){
+			var length = $('h1').length; //h1 태그의 갯수
+			var targetHTML = $(this).html();
+			$('#wrap').append('<h1>'+length+'-'+targetHTML+'</h1>');
+		})
+	})
+</script>
+</head>
+<body>
+	<div id="wrap">
+		<h1>Header</h1>
+	</div>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="../js/jquery-3.5.1.min.js"></script>
+<script type="text/javascript">
+	$(function() {
+				//이벤트의 종류, 이벤트 발생시 수행하는 함수(이벤트 핸들러)
+		$('h1').on('click',function(){
+			$(this).html(function(index,html) {
+				return html+'+';
+			})
+		})
+	})
+</script>
+</head>
+<body>
+	<h1>Header-0</h1>
+	<h1>Header-1</h1>
+	<h1>Header-2</h1>
+</body>
+</html>

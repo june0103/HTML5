@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>이벤트 처리</title>
+<style type="text/css">
+	.reverse{
+	color:white;
+	background:black;
+	}
+</style>
+<script type="text/javascript" src="../js/jquery-3.5.1.min.js"></script>
+<script type="text/javascript">
+	$(function() {
+		$('h1').hover(function() {
+			$(this).addClass('reverse');
+		}, function() {
+			$(this).removeClass('reverse');
+		})
+	})
+</script>
+</head>
+<body>
+	<h1>Header-0</h1>
+	<h1>Header-1</h1>
+	<h1>Header-2</h1>
+</body>
+</html>

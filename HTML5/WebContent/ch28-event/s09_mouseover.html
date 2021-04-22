@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>script에서 이벤트 연결</title>
+<script type="text/javascript">
+	window.onload = function() {
+		var alink = document.getElementsByTagName('a');
+		var bigImg = document.getElementById('bigImg');
+		
+		for (var i = 0; i < alink.length; i++) {
+			//마우스 올릴시 큰이미지 나오기
+			alink[i].onmouseover=function(){
+				bigImg.style.display = '';
+				//이벤트 대상 this
+				bigImg.src = this.href;
+				bigImg.width = 500;
+				bigImg.height = 350;
+			};
+			alink[i].onmouseout=function(){
+				//큰 이미지 숨기기
+				bigImg.style.display = 'none';
+			};
+			alink[i].onclick=function(){
+				return false; //a의 기본 이벤트 제거
+			}
+		}
+	};
+</script>
+</head>
+<body>
+	<div>
+		<a href="../images/Penguins.jpg"><img src="../images/Penguins.jpg" width="83"></a>
+		<a href="../images/Koala.jpg"><img src="../images/Koala.jpg" width="83"></a>
+	</div>
+	<div>
+		<img id="bigImg" style="display:none;">
+	</div>
+</body>
+</html>

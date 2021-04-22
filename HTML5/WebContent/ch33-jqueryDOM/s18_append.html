@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>문서 객체 생성 및 추가</title>
+<script type="text/javascript" src="../js/jquery-3.5.1.min.js"></script>
+<script type="text/javascript">
+/* 
+메서드 이름				설명
+$(A).append(B)			B(생성되는 태그)를 A의 기존 자식뒤에 추가
+$(A).prepend(B)			B를 A의 기존자식 앞에 추가
+$(A).after(B)			B를 A의 뒤에 추가(형제)
+$(A).before(B)			B를 A의 앞에 추가(형제)
+*/
+	$(function() {
+		//$('div').append('<h1>Hello jQuery!!</h1>');
+		//$('div').prepend('<h1>Hello jQuery!!</h1>');
+		//$('div').after('<h1>Hello jQuery!!</h1>');
+		$('div').before('<h1>Hello jQuery!!</h1>');
+	})
+</script>
+</head>
+<body>
+	<div>
+		<h1>토요일 오후</h1>
+		
+	</div>
+</body>
+</html>

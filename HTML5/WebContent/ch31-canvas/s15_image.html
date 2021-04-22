@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>특정 위치의 이미지만 보여주기</title>
+<script type="text/javascript">
+	window.onload = function() {
+		var canvas = document.getElementById('canvas');
+
+		if(canvas.getContext){
+			var context = canvas.getContext('2d');
+			
+			var img = new Image();
+			img.src = '../images/landscape1.jpg';
+			
+			img.onload = function() {
+				//이미지 객체, x, y
+				context.drawImage(img,10,10);
+				
+			}
+			
+			context.beginPath();
+			context.arc(200,110,100,0,Math.PI*2, true);
+			//특정위치의 이미지 내용만 보여지게 처리하고 나머지는 잘라내는 기법
+			context.clip();
+			
+		}else{
+			alert('지원하지않는 브라우저입니다.');
+		}
+}
+</script>
+</head>
+<body>
+	<canvas id="canvas" width="800" height="700"></canvas>
+</body>
+</html>

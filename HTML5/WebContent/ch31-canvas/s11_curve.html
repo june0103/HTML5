@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	window.onload = function() {
+		var canvas = document.getElementById('canvas');
+	
+		if(canvas.getContext){
+			var context = canvas.getContext('2d');
+			
+			context.beginPath();
+			//시작점을 50,200으로 옮김
+			context.moveTo(50,200);
+			//조절점1, 조절점2, 끝점
+			context.bezierCurveTo(90,50,310,50,350,200);
+			
+			context.stroke();
+			
+			
+		}else{
+			alert('지원하지않는 브라우저입니다.');
+		}
+	}
+
+</script>
+</head>
+<body>
+	<canvas id="canvas" width="500" height="220"></canvas>
+	<br>
+	<br>
+	<img src="../images/exp_02.gif">
+</body>
+</html>

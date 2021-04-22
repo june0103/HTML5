@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>방사형 그라디언트</title>
+<script type="text/javascript">
+	window.onload = function() {
+		var canvas = document.getElementById('canvas');
+
+		if(canvas.getContext){
+			var context = canvas.getContext('2d');
+			
+			//createRadialGradient(x1,y1,r1,x2,y2,r2)
+			//(x1,y1)을 중심으로 하는 반지름 r1인 원과 (x2,y2)를 중점으로 하는 반지름r2인 원, 이렇게 2개의 원을 만듬
+			var grad = context.createRadialGradient(45,45,10,62,60,80);
+			
+			//시작색과 끝색을 지정
+			grad.addColorStop(0,'#A7d30C');
+			grad.addColorStop(1,'rgb(1,159,98)');
+			
+			//원 그리기
+			context.beginPath();
+			
+			//생성한 그라디언트를 색상으로 적용
+			context.fillStyle = grad;
+			context.arc(80,80,80,0,Math.PI*2,true);
+			context.fill();
+			
+		}else{
+			alert('지원하지않는 브라우저입니다.');
+		}
+}
+</script>
+</head>
+<body>
+	<canvas id="canvas" width="500" height="300"></canvas>
+</body>
+</html>

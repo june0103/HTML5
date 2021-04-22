@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	for(var i = 0; i<5; i++){
+		for(var j = 0; j<5; j++){
+			if(j == 3){
+				break;
+			}
+			document.write('i값 : ' + i + ',j값 : ' + j + '<br>');
+		}
+	}
+	
+	document.write('--------------------------------<br>');
+	//break label문을 이용해서 중첩루프를 동시에 빠져나가게 처리
+	outer_loop:
+	for(var i = 0; i<5; i++){
+		for(var j = 0; j<5; j++){
+			if(j == 3){
+				break outer_loop;
+			}
+			document.write('i값 : ' + i + ',j값 : ' + j + '<br>');
+		}
+	}
+</script>
+</head>
+<body>
+
+</body>
+</html>

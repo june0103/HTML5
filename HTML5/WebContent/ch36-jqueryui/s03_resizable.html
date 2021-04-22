@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>jQuery UI</title>
+<link rel="stylesheet" href="../css/jquery-ui.min.css">
+<style type="text/css">
+		#resizable{
+			width: 150px;
+			height: 150px;
+			padding: 0.5em;
+		}
+		#resizable h3{
+			text-align: center;
+			margin: 0;
+		}
+</style>
+<script type="text/javascript" src="../js/jquery-3.5.1.min.js"></script>
+<script type="text/javascript" src="../js/jquery-ui.min.js"></script>
+<script type="text/javascript">
+	$(function() {
+		$('#resizable').resizable();
+	})
+</script>
+</head>
+<body>
+	<div id="resizable" class="ui-widget-content">
+		<h3 class="ui-widget-header">Resizable</h3>
+	</div>
+</body>
+</html>
