@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>데이터베이스 연동 실습</title>
+<script type="text/javascript" src="../js/jquery-3.5.1.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		//목록
+		function selectData() {
+			//table의 내부 내용을 제거(초기화)
+			$('#disp').empty();
+			
+			$.ajax({
+				url:'getPeopleXML.jsp',
+				type : 'get',
+				dataType : 'xml',
+				success:function(param){
+					$('#disp').empty();
+					$(param).find('person').each(function(){
+						var str = '<p>';
+						str += $(this).find('id').text() + ', ';
+						str += $(this).find('name').text() + ', ';
+						str += $(this).find('job').text() + ', ';
+						str += $(this).find('address').text() + ', ';
+						str += $(this).find('bloodtype').text();
+						str += '</p>';
+						$('#disp').append(str);
+					})
+				},
+				error:function(){
+					alert('네트워크 오류 발생');	
+				}
+			})
+		}
+		
+		selectData();
+		
+	})
+</script>
+</head>
+<body>
+	<div id="disp"></div>
+</body>
+</html>
